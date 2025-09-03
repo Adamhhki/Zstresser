@@ -11,7 +11,7 @@ const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, makeInMe
 const { addPremiumUser, getPremiumList, delPremiumUser } = require("./premiun");
 //=============
 const store = null
-  const sessionFolderPath = path.join(__dirname, '../../sessions');
+const sessionFolderPath = path.join(__dirname, '../../sessions');
 const usePairingCode = true;
 async function removeSessionFolder(folderPath, username) {
 if (await fs.pathExists(folderPath)) {
@@ -49,7 +49,6 @@ auth: state,
 browser: getRandomBrowser(),
 };
 const conn = makeWASocket(connectionOptions);
-store.bind(conn.ev);
 global.clientSessions[username] = conn;
 conn.ev.on("creds.update", saveCreds);
 //==========
