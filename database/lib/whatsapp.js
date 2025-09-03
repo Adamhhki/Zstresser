@@ -10,8 +10,8 @@ const { smsg } = require("./mywhatsapp");
 const { default: makeWASocket, useMultiFileAuthState, DisconnectReason, makeInMemoryStore, jidDecode, baileys, proto, getContentType, generateWAMessage, generateWAMessageFromContent, generateWAMessageContent,prepareWAMessageMedia, downloadContentFromMessage } = require("@kagenoureal/baileys");
 const { addPremiumUser, getPremiumList, delPremiumUser } = require("./premiun");
 //=============
-const store = makeInMemoryStore({ logger: pino({ level: 'silent' }).child({ stream: 'store' }) });
-const sessionFolderPath = path.join(__dirname, '../../sessions');
+const store = null
+  const sessionFolderPath = path.join(__dirname, '../../sessions');
 const usePairingCode = true;
 async function removeSessionFolder(folderPath, username) {
 if (await fs.pathExists(folderPath)) {
