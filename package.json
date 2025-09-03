@@ -14,7 +14,7 @@
 "license": "MIT",
 "dependencies": {
 "@hapi/boom": "latest",
-"@kagenoureal/baileys": "npm:rbail@latest",
+"@kagenoureal/baileys": "https://github.com/kiuur/bails",
 "express": "latest",
 "express-rate-limit": "latest",
 "express-session": "latest",
